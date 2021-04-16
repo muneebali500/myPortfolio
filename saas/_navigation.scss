@@ -1,0 +1,91 @@
+.nav {
+  position: fixed;
+  top: 30%;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.5s;
+  animation: moveLeft 0.4s ease-in 5s;
+  animation-fill-mode: forwards;
+
+  @media only screen and (max-width: 60em) {
+    animation: none;
+    left: -5rem;
+  }
+
+  &__link {
+    display: block;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-primary-light;
+    transition: all 0.3s linear;
+    box-shadow: 0.5rem 0rem 1rem rgba(0, 0, 0, 0.2),
+      -0.5rem 0rem 1rem rgba(0, 0, 0, 0.2);
+
+    .fas {
+      color: $color-primary-dark;
+    }
+    .tooltip {
+      position: absolute;
+      top: 2rem;
+      left: 3.5rem;
+      font-size: 1rem;
+      visibility: hidden;
+      transition: 0.3s ease-in;
+      color: $color-white;
+      opacity: 0;
+    }
+
+    &:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.7);
+    }
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -3.7rem;
+  }
+}
+
+.nav-btn {
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 3px;
+  font-size: 2.3rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  color: $color-primary-dark;
+  z-index: 100;
+  display: none;
+
+  @media only screen and (max-width: 60em) {
+    display: block;
+  }
+}
+
+.navHover:hover {
+  transform: translateX(3.7rem);
+
+  @media only screen and (max-width: 60em) {
+    transform: translateX(0);
+  }
+}

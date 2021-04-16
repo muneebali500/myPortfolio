@@ -1,0 +1,109 @@
+.project__container {
+  margin-left: auto;
+  @include main-container;
+}
+
+.project {
+  position: relative;
+  width: 22rem;
+  height: 20rem;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.1),
+    -0.5rem -0.5rem 0rem $color-primary-dark,
+    0.5rem 0.5rem 0 $color-primary-dark;
+  border-radius: 1.5rem 2px 0;
+  overflow: hidden;
+  margin: 2rem 1rem;
+  cursor: pointer;
+
+  &__img {
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-in-out;
+
+    &--name {
+      font-size: 2.5rem;
+      color: rgb(240, 240, 240);
+    }
+
+    &--btn,
+    &--code,
+    &--link {
+      align-self: center;
+      background-color: $color-primary-dark;
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      font-size: 1.5rem;
+      color: $color-white;
+      font-weight: bold;
+      box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s linear;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: scale(0.5);
+      }
+    }
+  }
+
+  &:hover .project__info {
+    transform: translateY(0);
+  }
+}
+
+.project__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  overflow: scroll;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 100000;
+  @include flex-center(row);
+  flex-wrap: wrap;
+  transition: all 0.6s linear;
+
+  &--closeBtn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+// this animation is used in script.js file
+@keyframes moveUp {
+  0% {
+    transform: translateY(100%);
+  }
+  10%,
+  90% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}

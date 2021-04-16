@@ -1,0 +1,58 @@
+.services__container {
+  margin-left: auto;
+  @include main-container;
+}
+
+.service {
+  height: 12rem;
+  width: 24rem;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 150rem;
+  margin: 2rem 0;
+
+  & > * {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    transform-origin: left;
+    transform: skewY(-3deg);
+  }
+
+  &__image {
+    background-color: $color-primary-dark;
+    padding: 2.5rem;
+    border-radius: 3px;
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    background-color: $color-primary-dark;
+    @include flex-center(column);
+    border-radius: 3px;
+    box-shadow: $box-shadow;
+    h2 {
+      font-size: 1.5rem;
+      color: $color-white;
+      text-align: center;
+      letter-spacing: 2px;
+      line-height: 1.2;
+    }
+  }
+}
+
+@keyframes coverRotate {
+  0% {
+    transform: skewY(-3deg) rotateY(0deg);
+  }
+  100% {
+    transform: skewY(-3deg) rotateY(-150deg);
+  }
+}

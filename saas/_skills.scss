@@ -1,0 +1,111 @@
+.skill__container {
+  margin-right: auto;
+  perspective: 200rem;
+  @include main-container;
+}
+
+.skill {
+  position: relative;
+  height: 14rem;
+  transform-style: preserve-3d;
+  margin: 2rem;
+
+  &:nth-child(1),
+  &:nth-child(4) {
+    width: 13rem;
+    transform: rotateY(-40deg);
+  }
+
+  &:nth-child(2),
+  &:nth-child(5) {
+    width: 12.3rem;
+    transform: rotateY(-35deg);
+  }
+
+  &:nth-child(3),
+  &:nth-child(6) {
+    width: 12.5rem;
+    transform: rotateY(-40deg);
+  }
+
+  & > * {
+    border: 1px solid;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    perspective: 100rem;
+  }
+
+  &__front {
+    background-color: $color-primary-dark;
+    border-right: 4px solid rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -0.45rem;
+      height: 100%;
+      width: 5px;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -1.5rem;
+      height: 100%;
+      width: 1.5rem;
+      background-color: #fff;
+      transform-origin: left;
+      transform: rotateY(90deg);
+    }
+  }
+
+  &__back {
+    background-color: $color-primary-dark;
+    transform: translateZ(-1.5rem);
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  &__icon {
+    fill: #f7f7f7;
+    height: 6rem;
+    width: 8rem;
+  }
+
+  &__name {
+    color: $color-white;
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+  }
+
+  &__rating {
+    font-size: 1.2rem;
+    color: $color-white;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0.4rem;
+    bottom: -1.5rem;
+    height: 1.7rem;
+    width: 100%;
+    background-color: #fff;
+    transform-origin: top;
+    transform: rotateX(-90deg) translateZ(0rem);
+  }
+}
+
+.order-right {
+  order: 1;
+
+  @media only screen and (max-width: 60em) {
+    order: 0;
+  }
+}

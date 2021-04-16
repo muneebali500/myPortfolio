@@ -1,0 +1,71 @@
+.contact__container {
+  position: fixed;
+  bottom: 2rem;
+  right: 1.5rem;
+  z-index: 1000;
+}
+
+.contact__info {
+  border: 1px solid;
+  position: absolute;
+  right: 1%;
+  bottom: 4.5rem;
+  background-color: $color-primary-dark;
+  border-radius: 0.6rem;
+  color: #fff;
+  transition: all 0.3s linear;
+  transform-origin: bottom right;
+  transform: scale(0);
+
+  &-phone,
+  &-email {
+    height: 5rem;
+    width: 100%;
+    @include flex-center(column);
+    font-size: 1.2rem;
+    padding: 4rem 2rem;
+    box-shadow: -0.5rem -0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+    i.fas {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.contact {
+  &__check {
+    display: none;
+
+    &:checked + .contact__info {
+      transform: scale(1);
+    }
+
+    &:checked ~ .contact__btn {
+      transform: rotate(360deg);
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 1%;
+    bottom: 4%;
+    border: 1px solid;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background-color: $color-primary-dark;
+    font-size: 2.8rem;
+    color: $color-white;
+    @include flex-center(row);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    visibility: hidden;
+
+    @media only screen and (max-width: 48em) {
+      height: 3.5rem;
+      width: 3.5rem;
+      font-size: 2.3rem;
+    }
+  }
+}

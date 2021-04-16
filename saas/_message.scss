@@ -1,0 +1,132 @@
+.message__container {
+  width: 100%;
+  max-width: 100%;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__info {
+  width: 32rem;
+  padding: 1.5rem 3rem;
+  background-color: $color-primary-dark;
+  border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1),
+    -0.5rem -0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+  & > label {
+    display: block;
+    margin: 0.5rem 0;
+    position: relative;
+
+    input,
+    textarea,
+    button {
+      font-size: 1.4rem;
+      padding: 1rem;
+      min-width: 100%;
+      background-color: $color-primary-dark;
+      border-radius: 0.5rem;
+      border: none;
+      outline: none;
+      caret-color: $color-white;
+      color: $color-white;
+      box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1),
+        -0.5rem -0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+      &::placeholder {
+        color: rgb(230, 200, 230);
+      }
+
+      &:focus + span,
+      &:valid + span {
+        transform: translate(-3.5rem, -1.8rem);
+        background-color: rgb(230, 200, 230);
+        color: $color-primary-dark;
+      }
+    }
+  }
+
+  &-placeholder {
+    position: absolute;
+    top: 32%;
+    left: 0;
+    left: 1rem;
+    pointer-events: none;
+    color: rgb(200, 200, 200);
+    transition: all 0.3s linear;
+  }
+
+  &-message {
+    span {
+      top: 8%;
+    }
+  }
+
+  &-btn {
+    cursor: pointer;
+    transition: transform 0.3s linear;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background-color: #d3155f60 !important;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.7);
+    }
+  }
+}
+
+.message__title {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 6vw;
+  letter-spacing: 3px;
+  color: transparent;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.22);
+  transform: scaleY(1.2);
+  margin-top: 1rem;
+}
+
+.message {
+  &__modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    height: 70vh;
+    width: 40rem;
+    max-width: 90%;
+    background-color: $color-primary-light;
+    border: 3px solid $color-primary-dark;
+    border-radius: 5px;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1),
+      -0.5rem -0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease-in;
+    z-index: 10000;
+  }
+
+  &-reply {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    font-size: 2rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1.3;
+  }
+
+  &-close {
+    font-size: 1rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+  }
+}
