@@ -987,6 +987,12 @@ main > section {
   line-height: 1.2;
 }
 
+@media only screen and (max-width: 31.25em) {
+  .service__title h2 {
+    font-size: 1.2rem;
+  }
+}
+
 @-webkit-keyframes coverRotate {
   0% {
     -webkit-transform: skewY(-3deg) rotateY(0deg);
