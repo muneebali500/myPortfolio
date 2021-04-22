@@ -440,9 +440,7 @@ main > section {
 }
 
 .message__container {
-  width: 100%;
-  max-width: 100%;
-  margin-right: auto;
+  min-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -463,6 +461,13 @@ main > section {
   border-radius: 0.5rem;
   -webkit-box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1), -0.5rem -0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1), -0.5rem -0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 31.25em) {
+  .form__info {
+    width: 30rem;
+    padding: 1.5rem 1.5rem;
+  }
 }
 
 .form__info > label {
