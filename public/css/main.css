@@ -465,8 +465,7 @@ main > section {
 
 @media only screen and (max-width: 31.25em) {
   .form__info {
-    width: 30rem;
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem 0.5rem;
   }
 }
 
@@ -876,6 +875,7 @@ main > section {
   font-size: 1rem;
   cursor: pointer;
   outline: none;
+  z-index: 1000;
 }
 
 @-webkit-keyframes moveUp {
