@@ -361,6 +361,8 @@ main > section {
   .myPhoto figure {
     height: 11rem;
     width: 12rem;
+    top: 1.5rem;
+    right: 1.5rem;
   }
 }
 
@@ -465,7 +467,7 @@ main > section {
 
 @media only screen and (max-width: 31.25em) {
   .form__info {
-    padding: 1.5rem 0.5rem;
+    padding: 1rem 1.2rem;
   }
 }
 
