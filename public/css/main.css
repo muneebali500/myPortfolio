@@ -132,7 +132,7 @@ main > section {
   width: 4rem;
   border-radius: 50%;
   background-color: #bb1333;
-  font-size: 2.8rem;
+  font-size: 2rem;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -213,24 +213,11 @@ main > section {
 }
 
 .header__container {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 @media only screen and (max-width: 51.25em) {
   .header__container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     margin-top: 0;
   }
 }
@@ -241,16 +228,6 @@ main > section {
   color: #fff;
   -webkit-transform: skewY(-7deg);
           transform: skewY(-7deg);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
 }
 
 @media only screen and (max-width: 68.75em) {
@@ -262,9 +239,6 @@ main > section {
 @media only screen and (max-width: 51.25em) {
   .header__container .name-wrapper {
     width: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -278,97 +252,16 @@ main > section {
 
 .header__container .name-wrapper .myOccupation {
   font-size: 2.5rem;
-  margin-right: 4rem;
 }
 
-@media only screen and (max-width: 51.25em) {
-  .header__container .name-wrapper .myOccupation {
-    margin-right: 0;
-  }
-}
-
-.myGreeting {
+.header__container .name-wrapper .myPhoto img {
   height: 10rem;
-  width: 10rem;
   border-radius: 50%;
-  background-color: #f8bbd0;
-  -webkit-transform: skewY(-7deg);
-          transform: skewY(-7deg);
-  -webkit-box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.1);
-          box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.1);
-  margin-right: 10rem;
+  border: 1px solid;
+  width: 10rem;
+  -o-object-position: 10% 20%;
+     object-position: 10% 20%;
   margin-top: 1rem;
-}
-
-@media only screen and (max-width: 51.25em) {
-  .myGreeting {
-    margin-right: 0;
-  }
-}
-
-.myGreeting span {
-  display: block;
-  font-size: 2.5rem;
-  color: rgba(255, 255, 255, 0.9);
-  -webkit-transform: skewY(-7deg);
-          transform: skewY(-7deg);
-  text-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
-  font-family: "Redressed", cursive;
-  font-weight: 800;
-  -webkit-animation: zoomIn 2s linear infinite;
-          animation: zoomIn 2s linear infinite;
-}
-
-.myGreeting span:nth-child(2) {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-
-.myGreeting span:nth-child(3) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-
-@media only screen and (max-width: 51.25em) {
-  .myGreeting span {
-    display: none;
-  }
-}
-
-.myPhoto {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  margin-left: -3rem;
-}
-
-@media only screen and (max-width: 51.25em) {
-  .myPhoto {
-    position: absolute;
-    bottom: 18%;
-    left: 42%;
-  }
-}
-
-.myPhoto figure {
-  height: 26rem;
-  width: 15rem;
-  position: relative;
-  z-index: 100;
-}
-
-@media only screen and (max-width: 51.25em) {
-  .myPhoto figure {
-    height: 11rem;
-    width: 12rem;
-    top: 1.5rem;
-    right: 1.5rem;
-  }
-}
-
-.myPhoto figure img {
-  -o-object-fit: initial;
-     object-fit: initial;
 }
 
 @-webkit-keyframes zoomIn {
