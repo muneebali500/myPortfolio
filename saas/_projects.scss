@@ -76,7 +76,7 @@
   left: 0;
   height: 0;
   width: 100%;
-  overflow: auto;
+  overflow-y: hidden;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 100000;
   @include flex-center(row);
@@ -92,6 +92,20 @@
     cursor: pointer;
     outline: none;
     z-index: 100000;
+  }
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f3f3f3;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #bb1333;
+    border-radius: 5px;
   }
 }
 
