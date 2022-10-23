@@ -38,7 +38,6 @@ button {
 
 main > section {
   position: relative;
-  min-height: 100vh;
   border-bottom: 0.5px solid;
   padding: 6rem 5vw;
   background-color: #f8bbd0;
@@ -142,6 +141,11 @@ main > section {
   justify-content: center;
   align-items: center;
   padding: 0 5vw;
+}
+@media only screen and (max-width: 59em) {
+  #header {
+    min-height: 45rem;
+  }
 }
 
 .bubbles-container {
@@ -665,6 +669,11 @@ main > section {
   background-color: #bb1333;
   padding: 2.5rem;
   border-radius: 3px;
+}
+@media only screen and (max-width: 25em) {
+  .service__image {
+    padding: 2.2rem 1.5rem;
+  }
 }
 .service__image svg {
   height: 100%;

@@ -27,6 +27,10 @@
     padding: 2.5rem;
     border-radius: 3px;
 
+    @media only screen and (max-width: 25em) {
+      padding: 2.2rem 1.5rem;
+    }
+
     svg {
       height: 100%;
       width: 100%;

@@ -34,6 +34,12 @@ myName.style.textShadow = shadow;
 const bubblesContainer = document.getElementById(`bubbles-container`);
 
 function bubbles() {
+  if (window.innerWidth < 650) {
+    bubblesContainer.innerHTML = ``;
+    return;
+  }
+
+  bubblesContainer.innerHTML = ``;
   for (let i = 0; i < 100; i++) {
     const bubble = document.createElement(`span`);
 
@@ -48,7 +54,8 @@ function bubbles() {
   }
 }
 
-bubbles();
+window.addEventListener(`load`, bubbles);
+window.addEventListener(`resize`, bubbles);
 
 /* EVENT LISTENER THAT SHOWS/DISPLAYS THE PROJECTS MODAL CONTAINER */
 const projectInfoBtn = document.querySelectorAll(`.project__info--btn`);
