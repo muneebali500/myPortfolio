@@ -47,6 +47,7 @@ main > section {
 @media only screen and (max-width: 60em) {
   main > section {
     flex-wrap: wrap;
+    padding: 3rem 5vw;
   }
 }
 
@@ -119,7 +120,7 @@ main > section {
   .contact__btn {
     height: 3.5rem;
     width: 3.5rem;
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
 }
 
@@ -285,7 +286,7 @@ main > section {
 }
 @media only screen and (max-width: 31.25em) {
   .form__info {
-    padding: 1rem 0.5rem;
+    padding: 0.1rem 0.3rem;
   }
 }
 .form__info > label {
@@ -536,7 +537,7 @@ main > section {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  padding: 3rem 4rem;
+  padding: 3rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -603,6 +604,11 @@ main > section {
 }
 .project__modal::-webkit-scrollbar {
   width: 1rem;
+}
+@media only screen and (max-width: 640px) {
+  .project__modal::-webkit-scrollbar {
+    width: 0;
+  }
 }
 .project__modal::-webkit-scrollbar-track {
   background: #f3f3f3;
