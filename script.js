@@ -63,8 +63,9 @@ const projectInfoBtn = document.querySelectorAll(`.project__info--btn`);
 projectInfoBtn.forEach((btn) => {
   btn.addEventListener(`click`, (e) => {
     const targetModal = e.target.parentElement.parentElement.nextElementSibling;
-    targetModal.style.height = `100%`;
     document.body.style.overflow = `hidden`;
+    // document.body.style.marginRight = `17px`;
+    targetModal.style.height = `100%`;
 
     setTimeout(() => {
       targetModal.style.overflowY = `auto`;
@@ -81,8 +82,9 @@ modalCloseBtn.forEach((btn) => {
     targetModal.style.height = `0`;
 
     setTimeout(() => {
-      document.body.style.overflow = `visible`;
       targetModal.style.overflowY = `hidden`;
+      document.body.style.overflow = `visible`;
+      // document.body.style.marginRight = `0`;
     }, 600);
   });
 });
