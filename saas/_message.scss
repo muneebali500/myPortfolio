@@ -87,12 +87,16 @@
 .message__title {
   flex-grow: 1;
   text-align: center;
-  font-size: 6vw;
+  font-size: 5rem;
   letter-spacing: 3px;
   color: transparent;
   text-shadow: 0 0 0 rgba(0, 0, 0, 0.22);
   transform: scaleY(1.2);
-  margin-top: 1rem;
+  margin-top: 2rem;
+
+  @media only screen and (max-width: 60em) {
+    font-size: 3rem;
+  }
 }
 
 .message {

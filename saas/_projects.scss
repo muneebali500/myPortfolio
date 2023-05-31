@@ -97,7 +97,7 @@
   &::-webkit-scrollbar {
     width: 1rem;
 
-    @media only screen and(max-width: 640px) {
+    @media only screen and (max-width: 640px) {
       width: 0;
     }
   }
