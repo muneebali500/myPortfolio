@@ -9,6 +9,13 @@ html {
   scroll-behavior: smooth;
 }
 
+.container {
+  width: 90rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
 body {
   box-sizing: border-box;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -41,13 +48,23 @@ main > section {
   border-bottom: 0.5px solid;
   padding: 6rem 5vw;
   background-color: #f8bbd0;
+}
+@media only screen and (max-width: 64em) {
+  main > section {
+    padding: 3rem 5vw;
+  }
+}
+
+.container {
   display: flex;
   align-items: center;
+  width: 75rem;
+  margin: 0 auto;
 }
-@media only screen and (max-width: 60em) {
-  main > section {
+@media only screen and (max-width: 64em) {
+  .container {
     flex-wrap: wrap;
-    padding: 3rem 5vw;
+    width: auto;
   }
 }
 
@@ -135,7 +152,7 @@ main > section {
 }
 
 #header {
-  min-height: 100vh;
+  height: 40rem;
   background-image: linear-gradient(to top, #f8bbd0 0% 20%, #bb1333 0% 100%);
   border-bottom: 0.5px solid;
   display: flex;
@@ -145,7 +162,7 @@ main > section {
 }
 @media only screen and (max-width: 59em) {
   #header {
-    min-height: 45rem;
+    height: 30rem;
   }
 }
 
@@ -161,7 +178,6 @@ main > section {
   position: absolute;
   border-radius: 50%;
   border: 1px solid;
-  -webkit-animation: animate linear infinite;
   animation: animate linear infinite;
 }
 .bubbles-container span:nth-child(even) {
@@ -196,7 +212,12 @@ main > section {
   font-size: 2.3rem;
 }
 .header__container .name-wrapper .myName__title {
-  font-size: 16vmin;
+  font-size: 6rem;
+}
+@media only screen and (max-width: 60em) {
+  .header__container .name-wrapper .myName__title {
+    font-size: 3rem;
+  }
 }
 .header__container .name-wrapper .myOccupation {
   font-size: 2.5rem;
@@ -211,19 +232,6 @@ main > section {
   margin-top: 1rem;
 }
 
-@-webkit-keyframes zoomIn {
-  0% {
-    transform: scale(0);
-  }
-  25%,
-  80% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-
 @keyframes zoomIn {
   0% {
     transform: scale(0);
@@ -234,22 +242,6 @@ main > section {
   }
   100% {
     transform: scale(0);
-  }
-}
-@-webkit-keyframes animate {
-  0% {
-    transform: translateY(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-2000%);
-    opacity: 0;
   }
 }
 @keyframes animate {
@@ -314,11 +306,6 @@ main > section {
 .form__info > label button::-moz-placeholder {
   color: rgb(230, 200, 230);
 }
-.form__info > label input:-ms-input-placeholder,
-.form__info > label textarea:-ms-input-placeholder,
-.form__info > label button:-ms-input-placeholder {
-  color: rgb(230, 200, 230);
-}
 .form__info > label input::placeholder,
 .form__info > label textarea::placeholder,
 .form__info > label button::placeholder {
@@ -363,12 +350,17 @@ main > section {
 .message__title {
   flex-grow: 1;
   text-align: center;
-  font-size: 6vw;
+  font-size: 4rem;
   letter-spacing: 3px;
   color: transparent;
   text-shadow: 0 0 0 rgba(0, 0, 0, 0.22);
   transform: scaleY(1.2);
-  margin-top: 1rem;
+  margin-top: 2rem;
+}
+@media only screen and (max-width: 60em) {
+  .message__title {
+    font-size: 3rem;
+  }
 }
 
 .message__modal {
@@ -411,14 +403,11 @@ main > section {
   left: 0;
   z-index: 1000;
   transition: all 0.5s;
-  -webkit-animation: moveLeft 0.4s ease-in 5s;
   animation: moveLeft 0.4s ease-in 5s;
-  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 @media only screen and (max-width: 60em) {
   .nav {
-    -webkit-animation: none;
     animation: none;
     left: -5rem;
   }
@@ -459,15 +448,6 @@ main > section {
 }
 .nav__link:active {
   transform: scale(0.7);
-}
-
-@-webkit-keyframes moveLeft {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -3.7rem;
-  }
 }
 
 @keyframes moveLeft {
@@ -619,19 +599,6 @@ main > section {
   border-radius: 5px;
 }
 
-@-webkit-keyframes moveUp {
-  0% {
-    transform: translateY(100%);
-  }
-  10%,
-  90% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(100%);
-  }
-}
-
 @keyframes moveUp {
   0% {
     transform: translateY(100%);
@@ -704,15 +671,6 @@ main > section {
 @media only screen and (max-width: 31.25em) {
   .service__title h2 {
     font-size: 1.2rem;
-  }
-}
-
-@-webkit-keyframes coverRotate {
-  0% {
-    transform: skewY(-3deg) rotateY(0deg);
-  }
-  100% {
-    transform: skewY(-3deg) rotateY(-150deg);
   }
 }
 
@@ -823,7 +781,7 @@ main > section {
 .order-right {
   order: 1;
 }
-@media only screen and (max-width: 60em) {
+@media only screen and (max-width: 64em) {
   .order-right {
     order: 0;
   }
@@ -832,7 +790,7 @@ main > section {
 .section__title {
   flex-grow: 1;
 }
-@media only screen and (max-width: 60em) {
+@media only screen and (max-width: 64em) {
   .section__title {
     display: flex;
     justify-content: center;
@@ -846,7 +804,7 @@ main > section {
   text-shadow: 0 0 0 rgba(0, 0, 0, 0.22);
   text-transform: uppercase;
 }
-@media only screen and (max-width: 60em) {
+@media only screen and (max-width: 64em) {
   .section__title span {
     display: inline-block;
     font-size: 5rem;
