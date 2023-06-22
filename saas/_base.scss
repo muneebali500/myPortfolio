@@ -66,6 +66,10 @@ a {
   color: #fff;
 }
 
+ul {
+  list-style: none;
+}
+
 button {
   cursor: pointer;
   border: none;
@@ -86,7 +90,7 @@ main > section {
 .container {
   display: flex;
   align-items: center;
-  width: 75rem;
+  width: 72rem;
   margin: 0 auto;
 
   @media only screen and (max-width: 64em) {
